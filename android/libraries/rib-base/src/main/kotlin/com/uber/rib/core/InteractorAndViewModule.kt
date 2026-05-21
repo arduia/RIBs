@@ -26,4 +26,4 @@ import android.view.View
 abstract class InteractorAndViewModule<I : Interactor<*, *>, V : View>(
   interactor: I,
   protected val view: V
-) : InteractorModule<I>(interactor)
+) : InteractorModuleHello<I>(interactor)
