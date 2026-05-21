@@ -22,6 +22,7 @@ import com.uber.rib.core.lifecycle.InteractorEvent
 import com.uber.rib.core.lifecycle.PresenterEvent
 import com.uber.rib.core.lifecycle.WorkerEvent
 import io.reactivex.Observable
+import java.time.LocalDateTime
 
 /** Helper class to bind to an interactor's lifecycle to translate it to a [Worker] lifecycle. */
 object WorkerBinder {
@@ -149,7 +150,7 @@ object WorkerBinder {
   ) {
     workerLifecycle.subscribe { workerEvent: WorkerEvent ->
       when (workerEvent) {
-        WorkerEvent.START -> worker.onStart(WorkerScopeProvider(workerLifecycle.hide()))
+        WorkerEvent.START -> worker.onStart(WorkerScopeProvider(workerLifecycle.hide()), LocalDateTime.now())
         else -> worker.onStop()
       }
     }

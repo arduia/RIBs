@@ -15,6 +15,8 @@
  */
 package com.uber.rib.core
 
+import java.time.LocalDateTime
+
 /**
  * Interface used when creating a manager or helper class that should be bound to an interactor's
  * lifecycle using a binder like [WorkerBinder]. The worker event is decoupled from the
@@ -26,8 +28,9 @@ interface Worker {
    * Called when worker is started.
    *
    * @param lifecycle The lifecycle of the worker to use for subscriptions.
+   * @param startDateTime The date and time when the worker started.
    */
-  fun onStart(lifecycle: WorkerScopeProvider) {}
+  fun onStart(lifecycle: WorkerScopeProvider, startDateTime: LocalDateTime = LocalDateTime.now()) {}
 
   /** Called when the worker is stopped.  */
   fun onStop() {}
