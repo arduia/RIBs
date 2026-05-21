@@ -1,0 +1,68 @@
+{
+  "name": "RIBs Architecture Framework",
+  "description": "Cross-platform mobile architecture framework with research documentation for mental alignment",
+
+  "permissions": {
+    "read": {
+      "patterns": [
+        "*.md",
+        "docs/research/**",
+        "CLAUDE.md"
+      ],
+      "allowAll": false
+    },
+    "git": {
+      "allowAll": true
+    },
+    "bash": {
+      "patterns": [
+        "find",
+        "grep",
+        "git",
+        "ls",
+        "pwd",
+        "test",
+        "mvn",
+        "gradle",
+        "swift",
+        "xcodebuild"
+      ],
+      "allowAll": false
+    }
+  },
+
+  "contextFiles": {
+    "description": "Files to load as context for agents",
+    "files": [
+      "CLAUDE.md",
+      "docs/research/README.md",
+      "docs/research/ARCHITECTURE_OVERVIEW.md"
+    ]
+  },
+
+  "agentInstructions": {
+    "beforeStarting": "Read CLAUDE.md and the relevant research documentation from docs/research/ before implementing",
+    "templates": {
+      "new_rib": "Read RIB_BASE.md, platform-specific module doc, and RIB_TEST.md before implementing",
+      "navigation": "Read RIB_ROUTER_NAVIGATOR.md and RIB_WORKFLOW.md for complex flows",
+      "testing": "Follow patterns in TESTING_GUIDE.md and RIB_TEST.md",
+      "compose": "Read RIB_ANDROID_COMPOSE.md before implementing Compose features"
+    }
+  },
+
+  "gitConfig": {
+    "preferredBranch": "mental_alignment",
+    "commitMessageTemplate": "Include reference to CLAUDE.md and relevant research docs in commit messages"
+  },
+
+  "searchPaths": {
+    "documentation": "docs/research/",
+    "androidCode": "android/libraries/",
+    "iOSCode": "ios/RIBs/",
+    "tutorials": ["android/tutorials/", "ios/tutorials/"]
+  },
+
+  "projectType": "cross-platform-mobile-architecture",
+  "languages": ["kotlin", "swift", "java"],
+  "frameworks": ["RIBs", "RxJava", "RxSwift", "Jetpack Compose", "UIKit"]
+}

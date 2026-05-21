@@ -17,6 +17,19 @@ The RIBs architecture provides:
 
 
 ## Documentation
+
+### Quick Start for Developers & Agents
+Start with **[CLAUDE.md](CLAUDE.md)** - Project context guide with links to research documentation.
+
+### Comprehensive Module Research
+Complete architectural research for all modules is available in **[docs/research/](docs/research/)** for mental alignment and context compression:
+- **[ARCHITECTURE_OVERVIEW.md](docs/research/ARCHITECTURE_OVERVIEW.md)** - System architecture and core concepts
+- **[Android Modules](docs/research/android/)** - Detailed guides for rib-base, rib-android, rib-android-compose, rib-workflow, rib-router-navigator, rib-test
+- **[iOS Framework](docs/research/ios/)** - Swift implementation with RxSwift
+- **[TESTING_GUIDE.md](docs/research/TESTING_GUIDE.md)** - Testing strategies across platforms
+- **[Research Index](docs/research/README.md)** - Complete module reference
+
+### Official Documentation
 To get started with RIBs, please refer to the [RIBs documentation](https://github.com/uber/RIBs/wiki). This describes key concepts on RIBs, from what they are for, their structure and common use cases.
 
 To get more hands on with RIBs, we have written a [series of tutorials](https://github.com/uber/RIBs/wiki) that run you through the main aspects of the architecture with hands-on examples.
