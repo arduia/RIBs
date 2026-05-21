@@ -155,6 +155,13 @@ These research documents are designed to provide context for AI agents and devel
 4. **Onboarding**: New team members can understand the architecture
 5. **Maintenance**: Reference when fixing bugs or refactoring
 
+### Agent Context System
+See **[AGENT_CONTEXT_SYSTEM.md](AGENT_CONTEXT_SYSTEM.md)** for detailed explanation of:
+- How agents discover and load research documentation
+- Workflow examples for common tasks
+- Quality assurance checklist
+- Continuous improvement process
+
 ## Version Information
 
 - **RIBs Version**: 0.12.0 (Android), 0.9+ (iOS)
