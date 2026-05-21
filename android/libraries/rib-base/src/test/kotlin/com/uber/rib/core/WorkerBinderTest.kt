@@ -36,7 +36,7 @@ class WorkerBinderTest {
   fun bind_whenInteractorAttached_shouldStartWorker() {
     val lifecycle = BehaviorRelay.createDefault(InteractorEvent.ACTIVE)
     bind(mapInteractorLifecycleToWorker(lifecycle), worker)
-    verify(worker).onStart(any())
+    verify(worker).onStart(any(), any())
   }
 
   @Test
@@ -78,7 +78,7 @@ class WorkerBinderTest {
   fun bindToWorkerLifecycle_whenStartEventEmitted_shouldStartWorker() {
     val lifecycle = BehaviorRelay.createDefault(WorkerEvent.START)
     bindToWorkerLifecycle(lifecycle, worker)
-    verify(worker).onStart(any())
+    verify(worker).onStart(any(), any())
   }
 
   @Test
@@ -93,7 +93,7 @@ class WorkerBinderTest {
   fun bind_whenPresenterAttached_shouldStartWorker() {
     val lifecycle = BehaviorRelay.createDefault(PresenterEvent.LOADED)
     bind(mapPresenterLifecycleToWorker(lifecycle), worker)
-    verify(worker).onStart(any())
+    verify(worker).onStart(any(), any())
   }
 
   @Test
