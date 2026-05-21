@@ -41,7 +41,7 @@ class MyInteractor(val presenter: MyPresenter) : Interactor<MyPresenter, MyRoute
 // Generated code automatically creates:
 // - MyBuilder (Builder implementation)
 // - MyComponent (Dagger component)
-// - MyInteractorModule (Dagger module)
+// - MyInteractorModuleHello (Dagger module)
 // - Proper dependency injection
 
 // Usage of generated builder
