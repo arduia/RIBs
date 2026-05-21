@@ -79,6 +79,8 @@ abstract class Interactor<P : Any, R : Router<*>> : LifecycleScopeProvider<Inter
     return false
   }
 
+  override fun attachedCount(): Int = router.getChildren().size
+
   /**
    * Called when detached. The [Interactor] should do its cleanup here. Note: View will be
    * removed automatically so [Interactor] doesn't have to remove its view here.

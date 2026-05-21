@@ -22,4 +22,5 @@ import com.uber.rib.core.lifecycle.InteractorEvent
 interface InteractorType : LifecycleScopeProvider<InteractorEvent> {
   fun isAttached(): Boolean
   fun handleBackPress(): Boolean
+  fun attachedCount(): Int
 }
