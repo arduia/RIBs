@@ -79,6 +79,7 @@ abstract class Interactor<P : Any, R : Router<*>> : LifecycleScopeProvider<Inter
     return false
   }
 
+  /** @return the count of attached child routers. */
   override fun attachedCount(): Int = router.getChildren().size
 
   /**
